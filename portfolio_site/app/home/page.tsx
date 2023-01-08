@@ -1,14 +1,10 @@
-import Navigation from "./components/nav";
-import Profile from "./components/profile";
-import Technology from "./components/technology";
-import Top from "./components/top";
+import Profile from "./profile";
+import Technology from "./technology";
+import Top from "./top";
 
 export default function Home() {
   return (
     <section className=" h-screen bg-background">
-      <header>
-        <Navigation />
-      </header>
       <body className="h-4/5 bg-background">
         <Top />
         <Profile />
