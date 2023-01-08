@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+
 import github from "./images/github-mark-white.svg";
 import LinkedIn from "./images/linkedin(1).svg";
 
