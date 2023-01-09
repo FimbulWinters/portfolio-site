@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <section>
       <section className=" h-screen bg-background">
-        <section className="h-4/5 bg-background">
+        <section className="h-4/5">
           <Top />
           <Profile />
           <Technology />
