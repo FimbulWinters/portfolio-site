@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import Menu from "./menu";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -17,6 +18,7 @@ export default function Navigation() {
       >
         menu
       </button>
+      {isOpen ? <Menu isOpen={isOpen} setIsOpen={setIsOpen} /> : null}
     </nav>
   );
 }
