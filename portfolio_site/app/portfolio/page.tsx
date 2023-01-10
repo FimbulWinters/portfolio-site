@@ -12,6 +12,7 @@ const Portfolio = () => {
     projectSummary: string;
     projectImage: StaticImageData;
     technologies: Array<string>;
+    links: Array<string>;
   }[] = [
     {
       projectName: "Game Review Server",
@@ -26,6 +27,10 @@ const Portfolio = () => {
         "Jest",
         "Supertest",
       ],
+      links: [
+        "https://github.com/FimbulWinters/Game-server-async-await",
+        "https://embarrassed-calf-lapel.cyclic.app/api",
+      ],
     },
     {
       projectName: "Game Review frontend",
@@ -33,6 +38,10 @@ const Portfolio = () => {
         "A server application to provide a RESTful API. Handles CRUD operations to Games Review front-end",
       projectImage: games,
       technologies: ["Reactjs", "Javascript", "Tailwind", "Axios", "HTML5"],
+      links: [
+        "https://github.com/FimbulWinters/Games-Front-end",
+        "https://boardgamecorner.netlify.app/home",
+      ],
     },
     {
       projectName: "Hobnob Game",
@@ -40,6 +49,10 @@ const Portfolio = () => {
         "A silly game that works in a similar way to Cookie Clicker. Please forgive the absolutelu terrible UI here... we had a small challenge in our seminar group to see who could make the loudest one possible",
       projectImage: hobnob,
       technologies: ["Reactjs", "Javascript", "HTML5", "CSS3"],
+      links: [
+        "https://github.com/FimbulWinters/hobnobgame/tree/main/hobnob-game",
+        "https://hobnobgame.netlify.app/",
+      ],
     },
     {
       projectName: "The Long Way Home",
@@ -55,6 +68,7 @@ const Portfolio = () => {
         "Mongoose",
         "mongoDB",
       ],
+      links: ["https://github.com/FimbulWinters/Power-projec-FE", ""],
     },
   ];
 
@@ -96,25 +110,22 @@ const Portfolio = () => {
                       );
                     })}
                   </section>
-                  <Link
-                    href={`/portfolio/${projectURL}`}
-                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-textColour bg-blue-700 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
-                  >
-                    Read more
-                    <svg
-                      aria-hidden="true"
-                      className="w-4 h-4 ml-2 -mr-1"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <button>
+                    <a
+                      className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-textColour"
+                      href={project.links[0]}
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                  </Link>
+                      See code on Github
+                    </a>
+                  </button>
+                  <button>
+                    <a
+                      className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-textColour"
+                      href={project.links[1]}
+                    >
+                      See in action
+                    </a>
+                  </button>
                 </div>
               </div>
             </article>

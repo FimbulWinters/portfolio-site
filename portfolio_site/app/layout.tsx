@@ -5,7 +5,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log("hello from home");
   return (
     <html>
       <head></head>
