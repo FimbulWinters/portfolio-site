@@ -5,14 +5,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  console.log("hello from home");
   return (
     <html>
-      <head>
-        <body>
-          {children}
-          <Navigation />
-        </body>
-      </head>
+      <head></head>
+      <body className="bg-background">
+        <Navigation />
+        {children}
+      </body>
     </html>
   );
 }

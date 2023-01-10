@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { GrFormClose } from "react-icons/gr";
 interface MenuProps {
   isOpen: boolean;
@@ -20,16 +21,40 @@ export default function Menu({ isOpen, setIsOpen }: MenuProps) {
         </div>
         <section className="flex flex-col space-y-8 mt-16 ml-4">
           <div>
-            <p>Portfolio</p>
+            <button
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <Link href="/portfolio">Portfolio</Link>
+            </button>
           </div>
           <div>
-            <p>About me</p>
+            <button
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <Link href="/about">About me</Link>
+            </button>
           </div>
           <div>
-            <p>CV</p>
+            <button
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <Link href="/cv">CV</Link>
+            </button>
           </div>
           <div>
-            <p>Contact</p>
+            <button
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              <Link href="/contact">Contact</Link>
+            </button>
           </div>
         </section>
       </div>
