@@ -5,7 +5,7 @@ import Menu from "./menu";
 
 export default function Navigation() {
   7;
-  console.log("hello from nav");
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
