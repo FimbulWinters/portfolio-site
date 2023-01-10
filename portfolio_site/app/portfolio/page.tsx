@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import holder from "../images/profile.png";
+
 import Link from "next/link";
 import server from "./images/Screenshot from 2023-01-09 13-55-08.png";
 import games from "./images/games.png";
@@ -60,18 +60,22 @@ const Portfolio = () => {
 
   return (
     <section className=" h-fit bg-background">
-      <h2 className="pt-16 text-textColour text-center text-xl">Portfolio </h2>
+      <h2 className="pt-24 mb-4 text-textColour text-center text-xl">
+        Portfolio{" "}
+      </h2>
 
       {projects.map((project) => {
+        const projectURL = project.projectName.replace(/\s/g, "");
+
         return (
           <section>
             <article className="m-4">
-              <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-md dark:bg-menuColour dark:border-secondaryText">
-                <div className="">
+              <div className="max-w-sm bg-menuColour border border-secondaryText rounded-lg shadow-md">
+                <div className=" my-2">
                   <Image
                     src={project.projectImage}
                     alt="project"
-                    className="w-64 h-64 mx-auto my-auto "
+                    className="w-64 h-64 mx-auto my-auto border-1 border-menuColour rounded-full object-cover"
                   />
                 </div>
                 <div className="p-5">
@@ -93,7 +97,7 @@ const Portfolio = () => {
                     })}
                   </section>
                   <Link
-                    href=""
+                    href={`/portfolio/${projectURL}`}
                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-textColour bg-blue-700 rounded-lg focus:ring-4 focus:outline-none focus:ring-blue-300"
                   >
                     Read more
